@@ -112,7 +112,13 @@ if (primo > secondo && secondo > terzo) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let numero = 90;
+let numeroForse = "70";
+if (typeof numero === "number") {
+  console.log("QUESO VALORE è UN NUMERO", numero);
+} else if (typeof numeroForse === "number") {
+  console.log("QUESO VALORE è UN NUMERO", numeroForse);
+}
 /* ESERCIZIO 9
   Crea un algoritmo per controllare se un numero fornito sia pari o dispari (suggerimento: cerca l'operatore modulo su un motore di ricerca)
 */
