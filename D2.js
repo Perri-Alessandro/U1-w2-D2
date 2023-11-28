@@ -156,26 +156,47 @@ if (val < 10) {
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
 
+// const me = {
+//   name: "John",
+//   lastName: "Doe",
+//   skills: ["javascript", "html", "css"],
+// };
+
+/* SCRIVI QUI LA TUA RISPOSTA */
 const me = {
   name: "John",
   lastName: "Doe",
   skills: ["javascript", "html", "css"],
 };
-
-/* SCRIVI QUI LA TUA RISPOSTA */
-
+me.city = "Toronto";
+console.log(me);
 /* ESERCIZIO 12
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere la proprietà "lastName".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const me2 = {
+  name: "John",
+  lastName: "Doe",
+  skills: ["javascript", "html", "css"],
+};
+me2.city = "Toronto";
+delete me2.lastName;
+console.log(me2);
 /* ESERCIZIO 13
   Lavorando sempre sull'oggetto precedentemente fornito, scrivi del codice per rimuovere l'ultimo elemento della proprietà "skills".
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+const me3 = {
+  name: "John",
+  lastName: "Doe",
+  skills: ["javascript", "html", "css"],
+};
+me3.city = "Toronto";
+delete me3.lastName;
+me3.skills.splice(2, 2);
+console.log(me3);
 /* ESERCIZIO 14
   Scrivi del codice per creare un array inizialmente vuoto. Riempilo successivamente con i numeri da 1 a 10.
 */
