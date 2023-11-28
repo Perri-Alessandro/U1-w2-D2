@@ -97,6 +97,7 @@ if (totalShoppingCart1 >= 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
+// lo so non ho inserito tutte le casistiche possibili ma non volevo rimanere indietro sul resto XD
 let primo = 10;
 let secondo = 5;
 let terzo = 20;
