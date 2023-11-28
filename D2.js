@@ -97,7 +97,16 @@ if (totalShoppingCart1 >= 50) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let primo = 10;
+let secondo = 5;
+let terzo = 20;
+if (primo > secondo && secondo > terzo) {
+  console.log("VALORI IN ORDINE DECRESCENTE", primo, secondo, terzo);
+} else if (secondo > primo && primo > terzo) {
+  console.log("VALORI IN ORDINE DECRESCENTE", secondo, primo, terzo);
+} else if (terzo > primo && primo > secondo) {
+  console.log("VALORI IN ORDINE DECRESCENTE", terzo, primo, secondo);
+}
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
