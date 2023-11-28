@@ -3,14 +3,14 @@
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-const num1 = 10;
-const num2 = 20;
 const numMaggiore = 10;
 const numMaggiore2 = 20;
 if (numMaggiore > numMaggiore2) {
   console.log("IL NUMERO MAGGIORE TRA 10 E 20 è:", numMaggiore);
 } else if (numMaggiore2 > numMaggiore) {
   console.log("IL NUMERO MAGGIORE TRA 10 E 20 è:", numMaggiore2);
+} else {
+  console.log("I 2 NUMERI SONO UGUALI");
 }
 /* ESERCIZIO 2
   Scrivi un algoritmo che mostri "not equal" in console se un numero intero fornito è diverso da 5.
@@ -18,9 +18,8 @@ if (numMaggiore > numMaggiore2) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const num = 10;
-const Num5 = 5;
-if (num !== Num5) {
-  console.log("10 NOT EQUAL", Num5);
+if (num !== 5) {
+  console.log("10 NOT EQUAL", 5);
 }
 /* ESERCIZIO 3
   Scrivi un algoritmo che mostri "divisibile per 5" in console se un numero fornito è perfettamente divisibile per 5 (suggerimento: usa l'operatore modulo)
@@ -28,8 +27,7 @@ if (num !== Num5) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 const div5 = 25;
-const divisore = 5;
-if (div5 % divisore === 0) {
+if (div5 % 5 === 0) {
   console.log("IL SEGUENTE NUMERO è PEFETTAMENTE DIVISIBILE PER 5", div5);
 }
 /* ESERCIZIO 4
@@ -39,16 +37,14 @@ if (div5 % divisore === 0) {
 /* SCRIVI QUI LA TUA RISPOSTA */
 const div8 = 9;
 const div82 = 1;
-if (div8 === 8) {
-  console.log("IL VALORE DI QUESTO NUMERO è UGAULE AL SEGUENTE", div8);
-} else if (div82 === 8) {
-  console.log("IL VALORE DI QUESTO NUMERO è UGAULE AL SEGUENTE", div82);
-} else if (div8 + div82 === 8) {
-  console.log("LA SOMMA DI 9 E 1 è IL SEGUENTE NUMERO", div8);
-} else if (div8 - div82 === 8) {
-  console.log("LA DIFFERENZA TRA 9 E 1 è IL SEGUENTE NUMERO", 8);
-} else if (div82 - div8 === 8) {
-  console.log("LA DIFFERENZA TRA 1 E 9 è IL SEGUENTE NUMERO", 8);
+if (
+  div8 === 8 ||
+  div82 === 8 ||
+  div8 + div82 === 8 ||
+  div8 - div82 === 8 ||
+  div82 - div8 === 8
+) {
+  console.log("VERIFICATO", 8);
 }
 
 /* ESERCIZIO 5
@@ -58,38 +54,27 @@ if (div8 === 8) {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let promo = "free";
 let costoSpedizione = 10;
-let totalShoppingCart = 100;
-if (totalShoppingCart >= 50) {
-  console.log("SPEDIZIONE GRATUITA, COSTO TOALE", totalShoppingCart);
-} else if (totalShoppingCart < 50) {
-  console.log(
-    "COSTO DELLA SPEDIZIONE + SPEDIZONE",
-    totalShoppingCart + costoSpedizione
-  );
+let totalShoppingCart = 80;
+if (totalShoppingCart < 50) {
+  totalShoppingCart += costoSpedizione;
 }
+
+console.log("TOTALE DA PAGARE:", totalShoppingCart);
 /* ESERCIZIO 6
   Stai lavorando su un sito di e-commerce. Oggi è il Black Friday e viene applicato il 20% su ogni prodotto.
   Modifica la risposta precedente includendo questa nuova promozione nell'algoritmo, determinando come prima se le spedizioni sono gratuite oppure no e e calcolando il totale.
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-let promo1 = "free";
 let costoSpedizione1 = 10;
-let totalShoppingCart1 = 100;
-let scontoBlackFriday = 0.2;
-if (totalShoppingCart1 >= 50) {
-  console.log(
-    "SPEDIZIONE GRATUITA, COSTO TOTALE + PROMOZIONE BLACK FRIDAY APPLICATA",
-    totalShoppingCart1 * (1 - scontoBlackFriday)
-  );
-} else {
-  console.log(
-    "COSTO DELLA SPEDIZIONE + TOTALE CON PROMOZIONE BLACK FRIDAY APPLICATA",
-    totalShoppingCart1 + costoSpedizione1 * (1 - scontoBlackFriday)
-  );
+let totalShoppingCart1 = 20 * 0.8;
+if (totalShoppingCart1 < 50) {
+  totalShoppingCart1 += costoSpedizione1;
 }
+
+console.log("TOTALE DA PAGARE:", totalShoppingCart1);
+
 /* ESERCIZIO 7
   Crea tre variabili, e assegna un valore numerico a ciascuna di esse.
   Utilizzando un blocco condizionale, crea un algoritmo per ordinarle secondo il loro valore, dal più alto al più basso.
@@ -129,8 +114,13 @@ let pOd = 5;
 let pOd2 = 12;
 if (pOd % 2 === 0) {
   console.log("IL NUMERO PARI è", pOd);
-} else if (pOd2 % 2 === 0) {
+} else {
+  console.log("IL NUMERO DISPARI è", pOd);
+}
+if (pOd2 % 2 === 0) {
   console.log("IL NUMERO PARI è", pOd2);
+} else {
+  console.log("IL NUMERO DISPARI è", pOd2);
 }
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
@@ -146,12 +136,12 @@ if (pOd % 2 === 0) {
 
 /* SCRIVI QUI LA TUA RISPOSTA */
 let val = 7;
-if (val < 10) {
-  console.log("Meno di 10", val);
-} else if (val < 5) {
+if (val < 5) {
   console.log("Meno di 5", val);
-} else if (val >= 10) {
-  console.log("Uguale a 10 o maggiore");
+} else if (val < 10) {
+  console.log("Meno di 10", val);
+} else {
+  console.log("Uguale a 10 o maggiore", val);
 }
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
