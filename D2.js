@@ -124,7 +124,13 @@ if (typeof numero === "number") {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let pOd = 5;
+let pOd2 = 12;
+if (pOd % 2 === 0) {
+  console.log("IL NUMERO PARI è", pOd);
+} else if (pOd2 % 2 === 0) {
+  console.log("IL NUMERO PARI è", pOd2);
+}
 /* ESERCIZIO 10
   Modifica la logica del seguente algoritmo in modo che mostri in console il messaggio corretto in ogni circostanza.
   let val = 7
@@ -138,7 +144,14 @@ if (typeof numero === "number") {
 */
 
 /* SCRIVI QUI LA TUA RISPOSTA */
-
+let val = 7;
+if (val < 10) {
+  console.log("Meno di 10", val);
+} else if (val < 5) {
+  console.log("Meno di 5", val);
+} else if (val >= 10) {
+  console.log("Uguale a 10 o maggiore");
+}
 /* ESERCIZIO 11
   Fornito il seguente oggetto, scrivi del codice per aggiungere una proprietà "city", il cui valore sarà "Toronto".
 */
